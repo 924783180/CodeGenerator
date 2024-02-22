@@ -1,0 +1,240 @@
+/**
+ * 整合并编写公共样式
+ */
+@import './variables.less';
+@import './transition.less';
+@import './sidebar.less';
+@import './element.less';
+
+a:focus,
+a:active {
+  outline: none;
+}
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+.no-border {
+  border: none !important;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.pointer {
+  cursor: pointer;
+}
+.none {
+  display: none;
+}
+.img {
+  width: 100%;
+  height: 100%;
+}
+.no-select {
+  user-select: none;
+}
+.inline {
+  display: inline-block;
+  vertical-align: top;
+}
+.success{
+  color: @success;
+}
+.danger{
+  color: @danger;
+}
+.warning{
+  color: @warning;
+}
+.info{
+  color: @info;
+}
+
+.clear {
+  zoom: 1;
+}
+.clear:after {
+  content: '';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.no-select {
+  user-select: none;
+}
+/******溢出...*******/
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ellipsis-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.ellipsis-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.ellipsis-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+/*列表页公共样式，包括标题（title-bar），工具栏（tool-bar），列表（table），列表中可点击的名称（details-btn）*/
+.table-public {
+  .main {
+    background: @main;
+    .title-bar {
+      border-bottom: 1px solid @line;
+      height: 45px;
+      line-height: 45px;
+      text-align: left;
+      .title {
+        display: inline-block;
+        border-left: 3px solid @base-color-default;
+        padding-right: 5px;
+        height: 20px;
+        line-height: 20px;
+        text-indent: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #666;
+      }
+      .right {
+        float: right;
+        font-size: 0;
+        text-align: right;
+        .title-item {
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 0 0 10px;
+          line-height: 44px;
+          font-size: 14px;
+          .el-button {
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    .tool-bar {
+      box-sizing: border-box;
+      padding-top: 13px;
+      background: #fff;
+      overflow: hidden;
+      .left, .right {
+        font-size: 0;
+        text-align: left;
+        .tool-item {
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 10px 0 0;
+          height: 44px;
+          line-height: 28px;
+          font-size: 14px;
+          .el-button {
+            vertical-align: middle;
+          }
+          .el-input__inner {
+            vertical-align: middle;
+          }
+          .tool-item-search {
+            vertical-align: initial;
+            margin-left: 10px;
+          }
+          .el-select {
+            width: 140px;
+          }
+          .complete {
+            width: 140px;
+          }
+          &.long {
+            .el-select {
+              width: 200px;
+            }
+          }
+        }
+      }
+      .left {
+        float: left;
+        text-align: left;
+      }
+      .right {
+        float: right;
+        text-align: right;
+        .tool-item {
+          margin: 0 0 0 10px;
+        }
+      }
+      .search-input {
+        width: 280px;
+        .el-input__inner {
+          vertical-align: middle;
+        }
+        &.long {
+          width: 300px;
+        }
+      }
+    }
+  }
+}
+.page {
+  box-sizing: border-box;
+  margin-top: 10px;
+  text-align: right;
+  background: #fff;
+  .checked-num {
+    float: left;
+    line-height: 32px;
+    font-size: 14px;
+    color: #999
+  }
+  .el-input__suffix{
+    right: 8px;
+  }
+  .el-select{
+    .el-input .el-input__inner{
+      height: var(--el-pagination-button-height);
+    }
+  }
+}
+
+/*
+弹窗样式
+*/
+.page-form {
+  padding: 25px 0 0;
+  height: 100%;
+  max-height: calc(70vh - 114px);
+  overflow-y: auto;
+  text-align: left;
+  &.check-box {
+    .el-form-item {
+      margin-bottom: 0;
+    }
+    .el-form-item__content {
+      color: #999;
+    }
+  }
+  .form-item {
+    .clear_btn {
+      margin-left: 100px;
+    }
+  }
+  .el-select, .el-date-editor, .el-input-number {
+    text-align: left;
+    width: 100%;
+    .el-input__inner {
+      text-align: left;
+    }
+  }
+}

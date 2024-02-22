@@ -1,11 +1,12 @@
 {
-  "name": "code_generator",
+  "name": "code-generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "vite --host",
-    "build": "run-p type-check build-only"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,19 @@
   "bugs": {
     "url": "https://github.com/924783180/CodeGenerator/issues"
   },
-  "homepage": "https://github.com/924783180/CodeGenerator#readme"
+  "homepage": "https://github.com/924783180/CodeGenerator#readme",
+  "dependencies": {
+    "element-plus": "^2.5.6",
+    "less": "^4.2.0",
+    "less-loader": "^12.2.0",
+    "pinia": "^2.1.7",
+    "reset.css": "^2.0.2",
+    "vue": "^3.4.19",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "vite": "^5.1.4"
+  }
 }
