@@ -1,0 +1,21 @@
+{
+  "name": "code_generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite --host",
+    "build": "run-p type-check build-only"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/924783180/CodeGenerator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/924783180/CodeGenerator/issues"
+  },
+  "homepage": "https://github.com/924783180/CodeGenerator#readme"
+}
